@@ -25,7 +25,6 @@ const Home = () => {
 		}
 		return () => clearInterval(slideInterval);
 	});
-
 	// (1) Changing image END
 
 	// (2) Searching

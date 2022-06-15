@@ -14,6 +14,7 @@ const Search = () => {
 		return sortedLang;
 	};
 
+	// Getting search keyword
 	let { hobby } = useParams();
 
 	return (
