@@ -7,11 +7,9 @@ const Search = () => {
 	const sortLang = (languages) => {
 		var sortedLang = "";
 		for (var i = 0; i < languages.length; i++) {
-			if (i + 1 === languages.length) {
-				sortedLang += languages[i];
-			} else {
-				sortedLang += `${languages[i]}, `;
-			}
+			i + 1 === languages.length
+				? (sortedLang += languages[i])
+				: (sortedLang += `${languages[i]}, `);
 		}
 		return sortedLang;
 	};
