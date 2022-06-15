@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import searchIcon from "../../img/search_white.png";
 import back_img from "../../img/back-img.png";
 import Hobbies from "../../data/Hobbies";
+import { useNavigate } from "react-router-dom";
 
-const Home = ({ search }) => {
+const Home = () => {
 	// (1) Changing image
 	const [currentImg, setCurrentImg] = useState(0);
 	const hobbiesLength = Hobbies.length;
@@ -29,14 +30,11 @@ const Home = ({ search }) => {
 
 	// (2) Searching
 	const [searchKey, setSearchKey] = useState("");
+	let navigate = useNavigate();
 
 	const performSearch = (e) => {
 		e.preventDefault();
-		if (!searchKey) {
-			return;
-		} else {
-			search(searchKey);
-		}
+		navigate(`/search/${searchKey}`, { replace: true });
 		setSearchKey("");
 	};
 	// (2) Searching END

@@ -1,7 +1,8 @@
 import React from "react";
 import Tutors from "../../data/Tutors";
+import { useParams } from "react-router-dom";
 
-const Search = ({ searchTarget }) => {
+const Search = () => {
 	// Sorting tutors languages
 	const sortLang = (languages) => {
 		var sortedLang = "";
@@ -15,11 +16,13 @@ const Search = ({ searchTarget }) => {
 		return sortedLang;
 	};
 
+	let { hobby } = useParams();
+
 	return (
 		<div className="search-container">
 			<div className="search-nav">
 				<h3>
-					Results for: <span id="search-keyword">{searchTarget}</span>{" "}
+					Results for: <span id="search-keyword">{hobby}</span>{" "}
 				</h3>
 				<div className="filters">
 					<h3>Filter by: </h3>
@@ -30,7 +33,7 @@ const Search = ({ searchTarget }) => {
 				</div>
 			</div>
 			<div className="search-results">
-				{Tutors.map((tutor) => {
+				{Tutors.filter((tutor) => tutor.hobby === hobby).map((tutor) => {
 					return (
 						<div key={tutor.id} className={`tutor number-${tutor.id}`}>
 							<img className="tutor-profile_picture" src={tutor.picture} />

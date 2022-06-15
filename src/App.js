@@ -9,8 +9,6 @@ import Login from "./components/Pages/Login";
 import Signup from "./components/Pages/Signup";
 
 function App() {
-	const [searchKey, setSearchKey] = useState("");
-
 	return (
 		<div className="App">
 			<Router>
@@ -29,13 +27,10 @@ function App() {
 					</div>
 				</nav>
 				<Routes>
-					<Route path="/" element={<Home search={setSearchKey} />} />
+					<Route path="/" element={<Home />} />
 					<Route path="/login" element={<Login />} />
-					<Route path="/signup" element={<Signup />} />
-					<Route
-						path="/search/:hobby"
-						element={<Search searchTarget={searchKey} />}
-					/>
+					<Route path="/signup/" element={<Signup />} />
+					<Route path="/search/:hobby" element={<Search />} />
 					<Route path="*" element={<ErrorPage />} />
 				</Routes>
 			</Router>
