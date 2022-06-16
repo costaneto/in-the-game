@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Tutors from "../../data/Tutors";
 import { useParams } from "react-router-dom";
+import noTutors from "../../img/no-tutors.gif";
 
 const Search = () => {
 	// Sorting tutors languages
@@ -17,6 +18,14 @@ const Search = () => {
 	// Getting search keyword
 	let { hobby } = useParams();
 
+	// If there's no tutor for the hobby searched
+	const [isMatch, setIsMatch] = useState(false);
+	useEffect(() => {
+		Tutors.forEach((tutor) => {
+			tutor.hobby == hobby.toLocaleLowerCase() && setIsMatch(!isMatch);
+		});
+	}, []);
+
 	return (
 		<div className="search-container">
 			<div className="search-nav">
@@ -31,34 +40,45 @@ const Search = () => {
 					</div>
 				</div>
 			</div>
-			<div className="search-results">
-				{Tutors.filter((tutor) => tutor.hobby === hobby).map((tutor) => {
-					return (
-						<div key={tutor.id} className={`tutor number-${tutor.id}`}>
-							<img className="tutor-profile_picture" src={tutor.picture} />
-							<div className="tutor-details">
-								<p className="tutor-name">
-									Name: <span className="detail-span">{tutor.name}</span>
-								</p>
-								<p className="tutor-distance">
-									Distance:{" "}
-									<span className="detail-span">{`${tutor.distance}km`}</span>
-								</p>
-								<p className="tutor-price">
-									Price:{" "}
-									<span className="detail-span">{`${tutor.price}€`}</span>
-								</p>
-								<p className="tutor-languages">
-									Speaks:{" "}
-									<span className="detail-span">
-										{sortLang(tutor.languages)}
-									</span>
-								</p>
+			{isMatch ? (
+				<div className="search-results">
+					{Tutors.filter(
+						(tutor) => tutor.hobby == hobby.toLocaleLowerCase()
+					).map((tutor) => {
+						return (
+							<div key={tutor.id} className={`tutor number-${tutor.id}`}>
+								<img className="tutor-profile_picture" src={tutor.picture} />
+								<div className="tutor-details">
+									<p className="tutor-name">
+										Name: <span className="detail-span">{tutor.name}</span>
+									</p>
+									<p className="tutor-distance">
+										Distance:{" "}
+										<span className="detail-span">{`${tutor.distance}km`}</span>
+									</p>
+									<p className="tutor-price">
+										Price:{" "}
+										<span className="detail-span">{`${tutor.price}€`}</span>
+									</p>
+									<p className="tutor-languages">
+										Speaks:{" "}
+										<span className="detail-span">
+											{sortLang(tutor.languages)}
+										</span>
+									</p>
+								</div>
 							</div>
-						</div>
-					);
-				})}
-			</div>
+						);
+					})}
+				</div>
+			) : (
+				<div className="no-tutor-container">
+					<div className="no-tutor-img">
+						<img src={noTutors} />
+					</div>
+					<p>No tutors for your hobby yet.</p>
+				</div>
+			)}
 		</div>
 	);
 };

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Pages/Home";
 import Search from "./components/Pages/Search";
-import ErrorPage from "./components/Pages/Error";
+import Error from "./components/Pages/Error";
 import logo from "./img/logo.png";
 import Login from "./components/Pages/Login";
 import Signup from "./components/Pages/Signup";
@@ -31,7 +31,7 @@ function App() {
 					<Route path="/login" element={<Login />} />
 					<Route path="/signup/" element={<Signup />} />
 					<Route path="/search/:hobby" element={<Search />} />
-					<Route path="*" element={<ErrorPage />} />
+					<Route path="*" element={<Error />} />
 				</Routes>
 			</Router>
 		</div>
