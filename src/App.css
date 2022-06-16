@@ -22,16 +22,6 @@
 	src: url(./fonts/Roboto-Bold.ttf);
 }
 
-@font-face {
-	font-family: Raleway;
-	src: url(./fonts/Raleway-VariableFont_wght.ttf);
-}
-
-@font-face {
-	font-family: Advent-Pro;
-	src: url(./fonts/AdventPro-Bold.ttf);
-}
-
 .App {
 	max-width: 100vw;
 	font-family: Roboto-Light;
