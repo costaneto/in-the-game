@@ -48,7 +48,7 @@
 }
 
 .navbar_logo img {
-	width: 100%;
+	width: 80%;
 }
 
 .navbar_links {
@@ -60,7 +60,7 @@
 
 .navbar_links a {
 	font-family: Roboto-Medium;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	color: var(--inthegame-orange);
 	text-decoration: none;
 	padding: 1rem 1.5rem;
