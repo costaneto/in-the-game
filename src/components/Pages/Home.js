@@ -11,7 +11,7 @@ const Home = () => {
 	let slideInterval;
 
 	const auto = () => {
-		slideInterval = setInterval(nextImg, 6000);
+		slideInterval = setInterval(nextImg, 4500);
 	};
 
 	const nextImg = () => {
