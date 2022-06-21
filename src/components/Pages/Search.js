@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Tutors from "../../data/Tutors";
+import { Tutors } from "../../data/Data";
 import { useParams } from "react-router-dom";
 import noTutors from "../../img/no-tutors.gif";
 import SearchResults from "../SearchResults";

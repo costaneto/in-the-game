@@ -23,27 +23,20 @@ const SearchResults = ({ keyword, tutors }) => {
 	const [popupPrice, setPopupPrice] = useState("");
 	const [popupLang, setPopupLang] = useState([]);
 
-	const showPopup = (
-		name,
-		picture,
-		hobby,
-		about,
-		distance,
-		price,
-		languages
-	) => {
+	const showPopup = (tutor) => {
 		setIsMoreInfo(!isMoreInfo);
-		setPopupName(name);
-		setPopupPic(picture);
-		setPopupHobby(hobby);
-		setPopupAbout(about);
-		setPopupDist(distance);
-		setPopupPrice(price);
-		setPopupLang(languages);
-		console.log("clicked");
+		setPopupName(tutor.name);
+		setPopupPic(tutor.picture);
+		setPopupHobby(tutor.hobby);
+		setPopupAbout(tutor.about);
+		setPopupDist(tutor.distance);
+		setPopupPrice(tutor.price);
+		setPopupLang(tutor.languages);
 	};
 
-	console.log(isMoreInfo);
+	const closePopup = () => {
+		setIsMoreInfo(!isMoreInfo);
+	};
 
 	return (
 		<>
@@ -55,7 +48,7 @@ const SearchResults = ({ keyword, tutors }) => {
 							<div
 								key={tutor.id}
 								className={`tutor number-${tutor.id}`}
-								onClick={showPopup}
+								onClick={() => showPopup(tutor)}
 							>
 								<img className="tutor-profile_picture" src={tutor.picture} />
 								<div className="tutor-details">
@@ -86,8 +79,16 @@ const SearchResults = ({ keyword, tutors }) => {
 			</div>
 			{isMoreInfo && (
 				<div className="popup-container">
-					<div className="popup-info"></div>
-					<div className="dark-background"></div>
+					<div className="popup-info">
+						{/* {popupName}
+						{popupPic}
+						{popupHobby}
+						{popupAbout}
+						{popupDist}
+						{popupPrice}
+						{popupLang} */}
+					</div>
+					<div className="dark-background" onClick={closePopup}></div>
 				</div>
 			)}
 		</>

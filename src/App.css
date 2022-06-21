@@ -317,7 +317,7 @@
 
 .tutor:hover {
 	cursor: pointer;
-	transform: scale(1.05);
+	transform: scale(1.1);
 	box-shadow: rgba(134, 197, 197, 0.604) 0px 18px 50px -10px;
 }
 
@@ -378,9 +378,10 @@ p {
 	position: absolute;
 	top: 0;
 }
+
 .popup-info {
 	width: 50%;
-	height: 80%;
+	height: 90%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -389,9 +390,10 @@ p {
 	background-color: white;
 	border-radius: 4rem;
 }
+
 .dark-background {
 	width: 100%;
 	height: 100%;
 	background-color: black;
-	opacity: 50%;
+	opacity: 60%;
 }

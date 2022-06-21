@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import searchIcon from "../../img/search_white.png";
 import back_img from "../../img/back-img.png";
-import Hobbies from "../../data/Hobbies";
+import { Hobbies } from "../../data/Data";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
