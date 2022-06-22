@@ -1,21 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Tutors } from "../../data/Data";
+import { Tutors, Filters } from "../../data/Data";
 import { useParams } from "react-router-dom";
 import noTutors from "../../img/no-tutors.gif";
 import SearchResults from "../SearchResults";
 
 const Search = () => {
-	// Sorting tutors languages
-	const sortLang = (languages) => {
-		var sortedLang = "";
-		for (var i = 0; i < languages.length; i++) {
-			i + 1 === languages.length
-				? (sortedLang += languages[i])
-				: (sortedLang += `${languages[i]}, `);
-		}
-		return sortedLang;
-	};
-
 	// Getting search keyword
 	let { hobby } = useParams();
 	const keyword = hobby.toLocaleLowerCase();
@@ -32,6 +21,11 @@ const Search = () => {
 		});
 	}, []);
 
+	// Filters
+	const [showFilterOpt, setShowFilterOpt] = useState(false);
+
+	console.log(showFilterOpt);
+
 	return (
 		<div className="search-container">
 			<div className="search-nav">
@@ -40,9 +34,37 @@ const Search = () => {
 				</h3>
 				<div className="filters">
 					<h3>Filter by: </h3>
-					<div className="filter-options">
-						<button>Distance</button>
-						<button>Price per hour</button>
+					<div className="filter-buttons">
+						{Filters.map((filter) => {
+							return (
+								<div key={filter.id} className="filter-button-container">
+									<button
+										className="filter-button"
+										onClick={() => {
+											setShowFilterOpt(!showFilterOpt);
+											console.log(showFilterOpt);
+										}}
+									>
+										<p>{filter.filterName}</p>
+										<div className="dropdown-arrow"></div>
+									</button>
+									<div className="filter-options">
+										{filter.options.map((option) => {
+											return (
+												<div key={option.id} className={"filter-option"}>
+													<input
+														type="checkbox"
+														name={filter.filterName}
+														value={option.optVal}
+													/>
+													<label>{option.optVal}</label>
+												</div>
+											);
+										})}
+									</div>
+								</div>
+							);
+						})}
 					</div>
 				</div>
 			</div>
