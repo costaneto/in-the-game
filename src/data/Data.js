@@ -162,8 +162,7 @@ export const Tutors = [
 
 export const Filters = [
 	{
-		id: 1,
-		filterName: "Distance",
+		name: "Distance",
 		options: [
 			{ id: 1, optVal: 5 },
 			{ id: 2, optVal: 10 },
@@ -174,8 +173,7 @@ export const Filters = [
 		],
 	},
 	{
-		id: 2,
-		filterName: "Price per hour",
+		name: "Price-per-hour",
 		options: [
 			{ id: 1, optVal: 10 },
 			{ id: 2, optVal: 15 },

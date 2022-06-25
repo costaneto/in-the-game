@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Tutors, Filters } from "../../data/Data";
 import { useParams } from "react-router-dom";
 import noTutors from "../../img/no-tutors.gif";
-import SearchResults from "../SearchResults";
+import SearchResults from "../other/SearchResults";
+import Dropdown from "../other/Dropdown";
+import Filter from "../other/Filter";
 
 const Search = () => {
 	// Getting search keyword
@@ -21,51 +23,19 @@ const Search = () => {
 		});
 	}, []);
 
-	// Filters
-	const [showFilterOpt, setShowFilterOpt] = useState(false);
-
-	console.log(showFilterOpt);
-
 	return (
 		<div className="search-container">
 			<div className="search-nav">
 				<h3>
 					Results for: <span id="search-keyword">{hobby}</span>{" "}
 				</h3>
-				<div className="filters">
+				<div className="filter-container">
 					<h3>Filter by: </h3>
-					<div className="filter-buttons">
-						{Filters.map((filter) => {
-							return (
-								<div key={filter.id} className="filter-button-container">
-									<button
-										className="filter-button"
-										onClick={() => {
-											setShowFilterOpt(!showFilterOpt);
-											console.log(showFilterOpt);
-										}}
-									>
-										<p>{filter.filterName}</p>
-										<div className="dropdown-arrow"></div>
-									</button>
-									<div className="filter-options">
-										{filter.options.map((option) => {
-											return (
-												<div key={option.id} className={"filter-option"}>
-													<input
-														type="checkbox"
-														name={filter.filterName}
-														value={option.optVal}
-													/>
-													<label>{option.optVal}</label>
-												</div>
-											);
-										})}
-									</div>
-								</div>
-							);
+					<ul className="filter-menu">
+						{Filters.map((filter, index) => {
+							return <Filter key={index} filter={filter} />;
 						})}
-					</div>
+					</ul>
 				</div>
 			</div>
 			{isMatch ? (
