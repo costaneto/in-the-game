@@ -8,23 +8,20 @@ const Filter = ({ filter }) => {
 	// we are displaying or hiding
 	let ref = useRef();
 
-	// Mousedowns or touching events on the page.
-	// Allows hiding of current opened dropdown
+	// Closing current dropdown
 	useEffect(() => {
-		// A dropdown is open. The handler gets the
-		// mousedown event
+		// handler will detect the click target.
+		// If it isn't the current ref, then close the dropdown
 		const handler = (event) => {
 			if (isDropdown && !ref.current.contains(event.target)) {
 				setIsDropdown(false);
 			}
-		};		
+		};
 
-		// This will listen for mousedown or touch events
-		// when dropdown is visble
 		document.addEventListener("mousedown", handler);
 		document.addEventListener("touchstart", handler);
 
-		// Cleanup the event listener
+		// Remove the event listener
 		return () => {
 			document.removeEventListener("mousedown", handler);
 			document.removeEventListener("touchstart", handler);
@@ -34,8 +31,14 @@ const Filter = ({ filter }) => {
 	return (
 		<li className="filter-item" ref={ref}>
 			<>
-				<button type="button">{filter.namen}</button>
-				<Dropdown dropdown={isDropdown} />
+				<button type="button" onClick={() => setIsDropdown((prev) => !prev)}>
+					<p>{filter.name}</p>
+				</button>
+				<Dropdown
+					dropdown={isDropdown}
+					options={filter.options}
+					inputName={filter.name}
+				/>
 			</>
 		</li>
 	);

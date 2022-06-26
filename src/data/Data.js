@@ -183,3 +183,8 @@ export const Filters = [
 		],
 	},
 ];
+
+export const FilterUnits = [
+	{ name: "Distance", unit: "km" },
+	{ name: "Price-per-hour", unit: "€" },
+];

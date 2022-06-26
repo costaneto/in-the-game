@@ -1,10 +1,12 @@
 :root {
 	--inthegame-orange: #f59338;
+	--inthegame-dark-orange: #d87d28;
 	--inthegame-soft-black: #2e2e2e;
 	--inthegame-teal: #21a0aa;
 	--inthegame-gray: #565656;
 	--inthegame-soft-gray: rgb(226, 226, 226);
 	--form-height: 4rem;
+	--card-hover: rgba(134, 197, 197, 0.732);
 }
 
 @font-face {
@@ -255,10 +257,10 @@
 }
 
 .search-nav h3 {
-	width: 30%;
+	width: auto;
 	font-family: Roboto-Bold;
 	color: var(--inthegame-orange);
-	margin: 0;
+	margin-right: 2rem;
 }
 
 #search-keyword {
@@ -268,18 +270,95 @@
 }
 
 .filter-container {
-	width: 50%;
+	width: 30%;
 	display: flex;
 	align-items: center;
-}
-
-.filter-container h3 {
-	width: 15%;
+	justify-content: center;
 }
 
 .filter-menu {
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	list-style: none;
+	padding: 0;
+}
+
+.filter-item {
+	display: flex;
+}
+
+.filter-item button,
+#apply-filter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	padding: 0.6rem 1.1rem;
+	border-radius: 2rem;
+	transition: 0.3s;
+	margin-right: 1.3rem;
+}
+
+.filter-item button {
+	background-color: var(--inthegame-orange);
+}
+
+.filter-item button:hover {
+	background-color: var(--inthegame-dark-orange);
+}
+
+.filter-item button p {
+	color: white;
+	font-size: 1.1em;
+	display: flex;
+	align-items: center;
+}
+
+.filter-item button p::after {
+	content: "";
+	display: inline-block;
+	height: 0;
+	width: 0;
+	margin-left: 0.5rem;
+	border-left: 0.35rem solid transparent;
+	border-right: 0.35rem solid transparent;
+	border-top: 0.35rem solid white;
+}
+
+#apply-filter {
+	color: white;
+	background-color: var(--inthegame-teal);
+}
+
+#apply-filter:hover {
+	background-color: teal;
+}
+
+.dropdown {
+	width: auto;
+	background-color: white;
+	border-radius: 2rem;
+	box-shadow: var(--card-hover) 0px 18px 50px -10px;
+	z-index: 1;
+	padding: 1.2rem 4rem 1.2rem 1.5rem;
+	position: absolute;
+	transform: translateY(3rem);
+	font-size: 1.1em;
+	display: none;
+}
+
+.dropdown.show {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+input[type="radio"] {
+	width: 1.2rem;
+	height: 1.2rem;
+	margin-bottom: 1.5rem;
+	margin-right: 0.5rem;
 }
 
 .no-tutor-container {
@@ -325,7 +404,7 @@
 .tutor:hover {
 	cursor: pointer;
 	transform: scale(1.1);
-	box-shadow: rgba(134, 197, 197, 0.604) 0px 18px 50px -10px;
+	box-shadow: var(--card-hover) 0px 18px 50px -10px;
 }
 
 .tutor img {

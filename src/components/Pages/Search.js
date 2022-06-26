@@ -30,12 +30,12 @@ const Search = () => {
 					Results for: <span id="search-keyword">{hobby}</span>{" "}
 				</h3>
 				<div className="filter-container">
-					<h3>Filter by: </h3>
 					<ul className="filter-menu">
 						{Filters.map((filter, index) => {
 							return <Filter key={index} filter={filter} />;
 						})}
 					</ul>
+					<button id="apply-filter">Filter</button>
 				</div>
 			</div>
 			{isMatch ? (
