@@ -163,6 +163,7 @@ export const Tutors = [
 export const Filters = [
 	{
 		name: "Distance",
+		unit: "km",
 		options: [
 			{ id: 1, optVal: 5 },
 			{ id: 2, optVal: 10 },
@@ -174,6 +175,7 @@ export const Filters = [
 	},
 	{
 		name: "Price-per-hour",
+		unit: "€",
 		options: [
 			{ id: 1, optVal: 10 },
 			{ id: 2, optVal: 15 },
@@ -182,9 +184,4 @@ export const Filters = [
 			{ id: 5, optVal: 30 },
 		],
 	},
-];
-
-export const FilterUnits = [
-	{ name: "Distance", unit: "km" },
-	{ name: "Price-per-hour", unit: "€" },
 ];

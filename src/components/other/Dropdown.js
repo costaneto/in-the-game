@@ -1,24 +1,19 @@
 import React from "react";
-import { FilterUnits } from "../../data/Data";
 
-const Dropdown = ({ dropdown, options, inputName }) => {
-	// Getting the right unit to be displayed
-	let unit = "";
-	FilterUnits.forEach((filterUnit) => {
-		if (inputName === filterUnit.name) {
-			unit = filterUnit.unit;
-		}
-	});
+const Dropdown = ({ dropdown, options, inputName, unit, setFilterValues }) => {
+	// key values
+	const optionAll = "all";
+	const lastOption = "last-option";
 
 	// use label key (all, last-option) to perform operations
 
 	return (
 		<div className={`dropdown${dropdown ? " show" : ""}`}>
-			<label key="all">
+			<label key={optionAll}>
 				<input
 					type="radio"
 					name={inputName}
-					value="all"
+					value={optionAll}
 					defaultChecked={true}
 				/>
 				All
@@ -32,7 +27,7 @@ const Dropdown = ({ dropdown, options, inputName }) => {
 					</label>
 				);
 			})}
-			<label key="last-option">
+			<label key={lastOption}>
 				<input
 					type="radio"
 					name={inputName}

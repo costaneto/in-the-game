@@ -3,7 +3,6 @@ import { Tutors, Filters } from "../../data/Data";
 import { useParams } from "react-router-dom";
 import noTutors from "../../img/no-tutors.gif";
 import SearchResults from "../other/SearchResults";
-import Dropdown from "../other/Dropdown";
 import Filter from "../other/Filter";
 
 const Search = () => {
@@ -23,6 +22,12 @@ const Search = () => {
 		});
 	}, []);
 
+	// Filter defaults
+	const [filterValues, setFilterValues] = useState({
+		distance: "all",
+		pricePerHour: "all",
+	});
+
 	return (
 		<div className="search-container">
 			<div className="search-nav">
@@ -32,20 +37,26 @@ const Search = () => {
 				<div className="filter-container">
 					<ul className="filter-menu">
 						{Filters.map((filter, index) => {
-							return <Filter key={index} filter={filter} />;
+							return (
+								<Filter
+									key={index}
+									filter={filter}
+									setFilterValues={setFilterValues}
+								/>
+							);
 						})}
 					</ul>
 					<button id="apply-filter">Filter</button>
 				</div>
 			</div>
 			{isMatch ? (
-				<SearchResults keyword={keyword} tutors={Tutors} />
+				<SearchResults keyword={keyword} tutors={Tutors} filterValues={filterValues}/>
 			) : (
 				<div className="no-tutor-container">
 					<div className="no-tutor-img">
 						<img src={noTutors} />
 					</div>
-					<p>No tutors for this hobby yet.</p>
+					<p>No tutors available.</p>
 				</div>
 			)}
 		</div>

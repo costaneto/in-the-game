@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
 
-const SearchResults = ({ keyword, tutors }) => {
-	// Sorting tutors languages
+const SearchResults = ({ keyword, tutors, filterValues }) => {
+	// Sorting tutor's language.
+	// Add language to sortedLang variable with comma.
+	// It doesn't add the comma if it is the last language
 	const sortLang = (languages) => {
 		var sortedLang = "";
 		for (var i = 0; i < languages.length; i++) {
@@ -13,8 +15,10 @@ const SearchResults = ({ keyword, tutors }) => {
 		return sortedLang;
 	};
 
-	// Popup with more info
-	const [isMoreInfo, setIsMoreInfo] = useState(false);
+	// Details for the popup.
+	// The popup will appear if the user
+	// clicks on one of the tutors cards.
+	const [isPopup, setIsPopup] = useState(false);
 	const [popupName, setPopupName] = useState("");
 	const [popupPic, setPopupPic] = useState(undefined);
 	const [popupHobby, setPopupHobby] = useState("");
@@ -24,7 +28,7 @@ const SearchResults = ({ keyword, tutors }) => {
 	const [popupLang, setPopupLang] = useState([]);
 
 	const showPopup = (tutor) => {
-		setIsMoreInfo(!isMoreInfo);
+		setIsPopup(!isPopup);
 		setPopupName(tutor.name);
 		setPopupPic(tutor.picture);
 		setPopupHobby(tutor.hobby);
@@ -35,7 +39,7 @@ const SearchResults = ({ keyword, tutors }) => {
 	};
 
 	const closePopup = () => {
-		setIsMoreInfo(!isMoreInfo);
+		setIsPopup(!isPopup);
 	};
 
 	return (
@@ -77,7 +81,7 @@ const SearchResults = ({ keyword, tutors }) => {
 						);
 					})}
 			</div>
-			{isMoreInfo && (
+			{isPopup && (
 				<div className="popup-container">
 					<div className="popup-info">
 						{/* {popupName}
