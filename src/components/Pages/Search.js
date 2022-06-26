@@ -45,7 +45,7 @@ const Search = () => {
 					<div className="no-tutor-img">
 						<img src={noTutors} />
 					</div>
-					<p>No tutors for your hobby yet.</p>
+					<p>No tutors for this hobby yet.</p>
 				</div>
 			)}
 		</div>

@@ -361,6 +361,11 @@ input[type="radio"] {
 	margin-right: 0.5rem;
 }
 
+.dropdown span {
+	font-weight: bolder;
+	color: var(--inthegame-orange);
+}
+
 .no-tutor-container {
 	width: 100%;
 	display: flex;
