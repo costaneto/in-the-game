@@ -18,28 +18,32 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 	// Details for the popup.
 	// The popup will appear if the user
 	// clicks on one of the tutors cards.
-	const [isPopup, setIsPopup] = useState(false);
-	const [popupName, setPopupName] = useState("");
-	const [popupPic, setPopupPic] = useState(undefined);
-	const [popupHobby, setPopupHobby] = useState("");
-	const [popupAbout, setPopupAbout] = useState("");
-	const [popupDist, setPopupDist] = useState("");
-	const [popupPrice, setPopupPrice] = useState("");
-	const [popupLang, setPopupLang] = useState([]);
+	const [popup, setPopup] = useState({
+		showing: false,
+		name: "",
+		picture: undefined,
+		hobby: "",
+		about: "",
+		distance: 0,
+		price: 0,
+		languages: [],
+	});
 
 	const showPopup = (tutor) => {
-		setIsPopup(!isPopup);
-		setPopupName(tutor.name);
-		setPopupPic(tutor.picture);
-		setPopupHobby(tutor.hobby);
-		setPopupAbout(tutor.about);
-		setPopupDist(tutor.distance);
-		setPopupPrice(tutor.price);
-		setPopupLang(tutor.languages);
+		setPopup({
+			showing: true,
+			name: tutor.name,
+			picture: tutor.picture,
+			hobby: tutor.hobby,
+			about: tutor.about,
+			distance: tutor.distance,
+			price: tutor.price,
+			languages: tutor.languages,
+		});
 	};
 
 	const closePopup = () => {
-		setIsPopup(!isPopup);
+		setPopup({ ...popup, showing: false });
 	};
 
 	return (
@@ -68,7 +72,7 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 									</p>
 									<p className="tutor-price">
 										Price:{" "}
-										<span className="detail-span">{`${tutor.price}€`}</span>
+										<span className="detail-span">{`${tutor.price}€/h`}</span>
 									</p>
 									<p className="tutor-languages">
 										Speaks:{" "}
@@ -81,16 +85,16 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 						);
 					})}
 			</div>
-			{isPopup && (
+			{popup.showing && (
 				<div className="popup-container">
 					<div className="popup-info">
-						{/* {popupName}
-						{popupPic}
-						{popupHobby}
-						{popupAbout}
-						{popupDist}
-						{popupPrice}
-						{popupLang} */}
+						{popup.name}
+						{popup.pic}
+						{popup.hobby}
+						{popup.about}
+						{popup.distance}
+						{popup.price}
+						{sortLang(popup.languages)}
 					</div>
 					<div className="dark-background" onClick={closePopup}></div>
 				</div>

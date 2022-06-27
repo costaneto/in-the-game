@@ -28,6 +28,10 @@ const Search = () => {
 		pricePerHour: "all",
 	});
 
+	const onChangeFilterValues = () => {
+		// setFilterValues;
+	};
+
 	return (
 		<div className="search-container">
 			<div className="search-nav">
@@ -41,7 +45,7 @@ const Search = () => {
 								<Filter
 									key={index}
 									filter={filter}
-									setFilterValues={setFilterValues}
+									changeFilterValues={onChangeFilterValues}
 								/>
 							);
 						})}
@@ -50,7 +54,11 @@ const Search = () => {
 				</div>
 			</div>
 			{isMatch ? (
-				<SearchResults keyword={keyword} tutors={Tutors} filterValues={filterValues}/>
+				<SearchResults
+					keyword={keyword}
+					tutors={Tutors}
+					filterValues={filterValues}
+				/>
 			) : (
 				<div className="no-tutor-container">
 					<div className="no-tutor-img">

@@ -1,6 +1,12 @@
 import React from "react";
 
-const Dropdown = ({ dropdown, options, inputName, unit, setFilterValues }) => {
+const Dropdown = ({
+	dropdown,
+	options,
+	inputName,
+	unit,
+	changeFilterValues,
+}) => {
 	// key values
 	const optionAll = "all";
 	const lastOption = "last-option";

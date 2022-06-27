@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Dropdown from "./Dropdown";
 
-const Filter = ({ filter, setFilterValues }) => {
+const Filter = ({ filter, changeFilterValues }) => {
 	const [isDropdown, setIsDropdown] = useState(false);
 
 	// ref is used to know which dropdown
@@ -39,7 +39,7 @@ const Filter = ({ filter, setFilterValues }) => {
 					options={filter.options}
 					inputName={filter.name}
 					unit={filter.unit}
-					setFilterValues={setFilterValues}
+					changeFilterValues={changeFilterValues}
 				/>
 			</>
 		</li>

@@ -22,8 +22,8 @@ export const Tutors = [
 		hobby: "baking",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "5",
-		price: "20",
+		distance: 5,
+		price: 20,
 		languages: ["English", "Portuguese"],
 	},
 	{
@@ -33,8 +33,8 @@ export const Tutors = [
 		hobby: "baking",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "11",
-		price: "15",
+		distance: 11,
+		price: 15,
 		languages: ["English"],
 	},
 	{
@@ -44,8 +44,8 @@ export const Tutors = [
 		hobby: "baking",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "3",
-		price: "26",
+		distance: 3,
+		price: 26,
 		languages: ["English", "Italian"],
 	},
 	{
@@ -55,8 +55,8 @@ export const Tutors = [
 		hobby: "gardening",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "20",
-		price: "12",
+		distance: 20,
+		price: 12,
 		languages: ["French", "Spanish"],
 	},
 	{
@@ -66,8 +66,8 @@ export const Tutors = [
 		hobby: "gardening",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "30",
-		price: "16",
+		distance: 30,
+		price: 16,
 		languages: ["Korean", "English"],
 	},
 	{
@@ -77,8 +77,8 @@ export const Tutors = [
 		hobby: "gardening",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "7",
-		price: "10",
+		distance: 7,
+		price: 10,
 		languages: ["English", "German"],
 	},
 	{
@@ -88,8 +88,8 @@ export const Tutors = [
 		hobby: "gardening",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "14",
-		price: "11",
+		distance: 14,
+		price: 11,
 		languages: ["Arabic", "French"],
 	},
 	{
@@ -99,8 +99,8 @@ export const Tutors = [
 		hobby: "music",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "6",
-		price: "25",
+		distance: 6,
+		price: 25,
 		languages: ["English"],
 	},
 	{
@@ -110,8 +110,8 @@ export const Tutors = [
 		hobby: "music",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "13",
-		price: "5",
+		distance: 13,
+		price: 5,
 		languages: ["Portuguese", "Italian"],
 	},
 	{
@@ -121,8 +121,8 @@ export const Tutors = [
 		hobby: "music",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "2",
-		price: "18",
+		distance: 2,
+		price: 18,
 		languages: ["English"],
 	},
 	{
@@ -132,8 +132,8 @@ export const Tutors = [
 		hobby: "music",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "33",
-		price: "24",
+		distance: 33,
+		price: 24,
 		languages: ["English", "Spanish"],
 	},
 	{
@@ -143,8 +143,8 @@ export const Tutors = [
 		hobby: "yoga",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "17",
-		price: "7",
+		distance: 17,
+		price: 7,
 		languages: ["English", "French"],
 	},
 	{
@@ -154,8 +154,8 @@ export const Tutors = [
 		hobby: "yoga",
 		about:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nec lorem nisi. Aliquam ultricies pharetra rhoncus. Vestibulum faucibus id mauris at hendrerit. Vestibulum consectetur mi nec nunc auctor dapibus vel vel magna. Vivamus aliquet arcu est, ut rhoncus lectus pretium vestibulum. Quisque commodo, magna ac lobortis ultricies, massa velit ornare.",
-		distance: "9",
-		price: "10",
+		distance: 9,
+		price: 10,
 		languages: ["Chinese", "Portuguese", "English"],
 	},
 ];
