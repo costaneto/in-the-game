@@ -2,6 +2,25 @@ import React from "react";
 import { useState } from "react";
 
 const SearchResults = ({ keyword, tutors, filterValues }) => {
+	// Filter tutors
+	const filterCondition = (tutor) => {
+		if (filterValues.distance == "all" && filterValues.price == "all") {
+			return tutor.hobby.includes(keyword);
+		} else if (filterValues.distance != "all" && filterValues.price == "all") {
+			return (
+				tutor.hobby.includes(keyword) && tutor.distance <= filterValues.distance
+			);
+		} else if (filterValues.distance == "all" && filterValues.price != "all") {
+			return tutor.hobby.includes(keyword) && tutor.price <= filterValues.price;
+		} else {
+			return (
+				tutor.hobby.includes(keyword) &&
+				tutor.distance <= filterValues.distance &&
+				tutor.price <= filterValues.price
+			);
+		}
+	};
+
 	// Sorting tutor's language.
 	// Add language to sortedLang variable with comma.
 	// It doesn't add the comma if it is the last language
@@ -48,9 +67,10 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 
 	return (
 		<>
+			{/* Tutors cards */}
 			<div className="search-results">
 				{tutors
-					.filter((tutor) => tutor.hobby.includes(keyword))
+					.filter((tutor) => filterCondition(tutor))
 					.map((tutor) => {
 						return (
 							<div
@@ -85,6 +105,8 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 						);
 					})}
 			</div>
+
+			{/* Show popup */}
 			{popup.showing && (
 				<div className="popup-container">
 					<div className="popup-info">

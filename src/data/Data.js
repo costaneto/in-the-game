@@ -174,8 +174,8 @@ export const Filters = [
 		],
 	},
 	{
-		name: "Price-per-hour",
-		unit: "€",
+		name: "Price",
+		unit: "€/h",
 		options: [
 			{ id: 1, optVal: 10 },
 			{ id: 2, optVal: 15 },

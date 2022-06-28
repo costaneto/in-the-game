@@ -5,9 +5,10 @@ const Dropdown = ({
 	options,
 	inputName,
 	unit,
-	changeFilterValues,
+	onChangeFilterValues,
 }) => {
 	// key values
+	const inputNameLower = inputName.toLocaleLowerCase();
 	const optionAll = "all";
 	const lastOption = "last-option";
 
@@ -18,16 +19,22 @@ const Dropdown = ({
 			<label key={optionAll}>
 				<input
 					type="radio"
-					name={inputName}
+					name={inputNameLower}
 					value={optionAll}
 					defaultChecked={true}
+					onChange={onChangeFilterValues}
 				/>
 				All
 			</label>
 			{options.map((option) => {
 				return (
 					<label key={option.id}>
-						<input type="radio" name={inputName} value={option.optVal} />
+						<input
+							type="radio"
+							name={inputNameLower}
+							value={option.optVal}
+							onChange={onChangeFilterValues}
+						/>
 						<span>&#60; </span>
 						{`${option.optVal} ${unit}`}
 					</label>
@@ -36,8 +43,9 @@ const Dropdown = ({
 			<label key={lastOption}>
 				<input
 					type="radio"
-					name={inputName}
+					name={inputNameLower}
 					value={options[options.length - 1].optVal}
+					onChange={onChangeFilterValues}
 				/>
 				<span>+ </span>
 				{`${options[options.length - 1].optVal} ${unit}`}

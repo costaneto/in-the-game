@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import noTutors from "../../img/no-tutors.gif";
 import SearchResults from "../other/SearchResults";
 import Filter from "../other/Filter";
+import NoTutors from "../other/NoTutors";
 
 const Search = () => {
 	// Getting search keyword
@@ -22,14 +23,15 @@ const Search = () => {
 		});
 	}, []);
 
-	// Filter defaults
+	// Filter defaults values
 	const [filterValues, setFilterValues] = useState({
 		distance: "all",
-		pricePerHour: "all",
+		price: "all",
 	});
 
-	const onChangeFilterValues = () => {
-		// setFilterValues;
+	// Change filter values
+	const changeFilterValues = (e) => {
+		setFilterValues({ ...filterValues, [e.target.name]: e.target.value });
 	};
 
 	return (
@@ -45,12 +47,11 @@ const Search = () => {
 								<Filter
 									key={index}
 									filter={filter}
-									changeFilterValues={onChangeFilterValues}
+									onChangeFilterValues={changeFilterValues}
 								/>
 							);
 						})}
 					</ul>
-					<button id="apply-filter">Filter</button>
 				</div>
 			</div>
 			{isMatch ? (
@@ -60,12 +61,7 @@ const Search = () => {
 					filterValues={filterValues}
 				/>
 			) : (
-				<div className="no-tutor-container">
-					<div className="no-tutor-img">
-						<img src={noTutors} />
-					</div>
-					<p>No tutors available.</p>
-				</div>
+				<NoTutors />
 			)}
 		</div>
 	);
