@@ -9,18 +9,14 @@ const Dropdown = ({
 }) => {
 	// key values
 	const inputNameLower = inputName.toLocaleLowerCase();
-	const optionAll = "all";
-	const lastOption = "last-option";
-
-	// use label key (all, last-option) to perform operations
 
 	return (
 		<div className={`dropdown${dropdown ? " show" : ""}`}>
-			<label key={optionAll}>
+			<label key="all">
 				<input
 					type="radio"
 					name={inputNameLower}
-					value={optionAll}
+					value="all"
 					defaultChecked={true}
 					onChange={onChangeFilterValues}
 				/>
@@ -40,16 +36,6 @@ const Dropdown = ({
 					</label>
 				);
 			})}
-			<label key={lastOption}>
-				<input
-					type="radio"
-					name={inputNameLower}
-					value={options[options.length - 1].optVal}
-					onChange={onChangeFilterValues}
-				/>
-				<span>+ </span>
-				{`${options[options.length - 1].optVal} ${unit}`}
-			</label>
 		</div>
 	);
 };
