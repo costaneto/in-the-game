@@ -90,7 +90,7 @@ export const Tutors = [
 	{
 		id: 7,
 		rating: 4.9,
-		name: "Abdurrahman Whelan",
+		name: "Kaif Whelan",
 		picture: require("../img/tutors/tutor-4.png"),
 		hobby: "gardening",
 		about:

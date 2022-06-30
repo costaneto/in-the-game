@@ -399,49 +399,64 @@ input[type="radio"] {
 }
 
 .tutor {
+	width: 90%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	padding: 1.5rem;
 	border-radius: 2rem;
 	background-color: white;
-	transition: all 0.3s;
+	transition: all 0.2s;
 }
 
 .search-results .tutor:hover {
 	cursor: pointer;
-	transform: scale(1.1);
+	transform: scale(1.05);
 	box-shadow: var(--card-hover) 0px 18px 50px -10px;
 }
 
-.tutor img {
+.tutor-profile_picture {
 	width: 30%;
 }
 
+.rating-star {
+	width: 6%;
+	margin-left: 0.5rem;
+}
+
 .tutor-details {
-	width: 70%;
+	width: 65%;
 }
 
 .tutor-details p {
 	font-family: Roboto-Bold;
 }
 
-.name-and-rating {
-	display: flex;
-	align-items: center;
+.tutor-name {
+	font-size: 1.2em;
+}
+
+.tutor-name .detail-span {
+	margin-left: 0.5rem;
 }
 
 .detail-span {
 	font-family: Roboto-Light;
 }
 
+.detail,
+.name-and-rating {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+
 .tutor-details .remaining-details {
 	display: block;
 }
 
-.detail {
-	display: flex;
-	align-items: center;
+.remaining-details img {
+	margin-right: 0.5rem;
 }
 
 .remaining-details:last-child {
@@ -471,10 +486,12 @@ input[type="radio"] {
 	background-color: white;
 	border-radius: 4rem;
 }
+
 .popup-info .remaining-details {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
+
 .popup-info img {
 	width: 10%;
 }
