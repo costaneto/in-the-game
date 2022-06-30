@@ -401,13 +401,14 @@ input[type="radio"] {
 .tutor {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	padding: 1.5rem;
 	border-radius: 2rem;
 	background-color: white;
 	transition: all 0.3s;
 }
 
-.tutor:hover {
+.search-results .tutor:hover {
 	cursor: pointer;
 	transform: scale(1.1);
 	box-shadow: var(--card-hover) 0px 18px 50px -10px;
@@ -418,16 +419,71 @@ input[type="radio"] {
 }
 
 .tutor-details {
-	margin-left: 3rem;
+	width: 70%;
 }
 
 .tutor-details p {
 	font-family: Roboto-Bold;
-	margin-bottom: 0.5rem;
+}
+
+.name-and-rating {
+	display: flex;
+	align-items: center;
 }
 
 .detail-span {
 	font-family: Roboto-Light;
+}
+
+.tutor-details .remaining-details {
+	display: block;
+}
+
+.detail {
+	display: flex;
+	align-items: center;
+}
+
+.remaining-details:last-child {
+	margin: 0;
+}
+
+.detail img {
+	width: 8%;
+}
+
+.popup-container {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+}
+
+.popup-info {
+	width: 50%;
+	height: 90%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	z-index: 1;
+	background-color: white;
+	border-radius: 4rem;
+}
+.popup-info .remaining-details {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.popup-info img {
+	width: 10%;
+}
+
+.dark-background {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 60%;
 }
 
 .error-container {
@@ -462,31 +518,4 @@ p {
 
 .error-container p {
 	font-size: 1.5em;
-}
-
-.popup-container {
-	width: 100%;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	z-index: 2;
-}
-
-.popup-info {
-	width: 50%;
-	height: 90%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	position: absolute;
-	z-index: 1;
-	background-color: white;
-	border-radius: 4rem;
-}
-
-.dark-background {
-	width: 100%;
-	height: 100%;
-	background-color: black;
-	opacity: 60%;
 }

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Tutors, Filters } from "../../data/Data";
 import { useParams } from "react-router-dom";
-import noTutors from "../../img/no-tutors.gif";
 import SearchResults from "../other/SearchResults";
 import Filter from "../other/Filter";
 import NoTutors from "../other/NoTutors";

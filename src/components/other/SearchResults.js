@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import TutorDetails from "./TutorDetails";
 
 const SearchResults = ({ keyword, tutors, filterValues }) => {
 	// Filter tutors
@@ -21,26 +22,14 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 		}
 	};
 
-	// Sorting tutor's language.
-	// Add language to sortedLang variable with comma.
-	// It doesn't add the comma if it is the last language
-	const sortLang = (languages) => {
-		var sortedLang = "";
-		for (var i = 0; i < languages.length; i++) {
-			i + 1 === languages.length
-				? (sortedLang += languages[i])
-				: (sortedLang += `${languages[i]}, `);
-		}
-		return sortedLang;
-	};
-
 	// Details for the popup.
 	// The popup will appear if the user
 	// clicks on one of the tutors cards.
 	const [popup, setPopup] = useState({
 		showing: false,
-		name: "",
 		picture: undefined,
+		rating: 0,
+		name: "",
 		hobby: "",
 		about: "",
 		distance: 0,
@@ -50,9 +39,10 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 
 	const showPopup = (tutor) => {
 		setPopup({
-			showing: true,
-			name: tutor.name,
+			showing: true, // show popup
 			picture: tutor.picture,
+			rating: tutor.rating,
+			name: tutor.name,
 			hobby: tutor.hobby,
 			about: tutor.about,
 			distance: tutor.distance,
@@ -75,32 +65,18 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 						return (
 							<div
 								key={tutor.id}
-								className={`tutor number-${tutor.id}`}
+								className="tutor"
 								onClick={() => showPopup(tutor)}
 							>
-								<img className="tutor-profile_picture" src={tutor.picture} />
-								<div className="tutor-details">
-									<p className="tutor-name">
-										Name: <span className="detail-span">{tutor.name}</span>
-									</p>
-									<p className="tutor-hobby">
-										Teaches: <span className="detail-span">{tutor.hobby}</span>
-									</p>
-									<p className="tutor-distance">
-										Distance:{" "}
-										<span className="detail-span">{`${tutor.distance}km`}</span>
-									</p>
-									<p className="tutor-price">
-										Price:{" "}
-										<span className="detail-span">{`${tutor.price}€/h`}</span>
-									</p>
-									<p className="tutor-languages">
-										Speaks:{" "}
-										<span className="detail-span">
-											{sortLang(tutor.languages)}
-										</span>
-									</p>
-								</div>
+								<TutorDetails
+									picture={tutor.picture}
+									rating={tutor.rating}
+									name={tutor.name}
+									hobby={tutor.hobby}
+									price={tutor.price}
+									languages={tutor.languages}
+									distance={tutor.distance}
+								/>
 							</div>
 						);
 					})}
@@ -110,13 +86,17 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 			{popup.showing && (
 				<div className="popup-container">
 					<div className="popup-info">
-						{popup.name}
-						{popup.pic}
-						{popup.hobby}
-						{popup.about}
-						{popup.distance}
-						{popup.price}
-						{sortLang(popup.languages)}
+						<div className="tutor">
+							<TutorDetails
+								picture={popup.picture}
+								rating={popup.rating}
+								name={popup.name}
+								hobby={popup.hobby}
+								price={popup.price}
+								languages={popup.languages}
+								distance={popup.distance}
+							/>
+						</div>
 					</div>
 					<div className="dark-background" onClick={closePopup}></div>
 				</div>

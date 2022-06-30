@@ -17,6 +17,7 @@ export const Hobbies = [
 export const Tutors = [
 	{
 		id: 1,
+		rating: 3.6,
 		name: "Keir Gamble",
 		picture: require("../img/tutors/tutor-1.png"),
 		hobby: "baking",
@@ -28,6 +29,7 @@ export const Tutors = [
 	},
 	{
 		id: 2,
+		rating: 3.5,
 		name: "Alexie Pittman",
 		picture: require("../img/tutors/tutor-6.png"),
 		hobby: "baking",
@@ -39,6 +41,7 @@ export const Tutors = [
 	},
 	{
 		id: 3,
+		rating: 3.8,
 		name: "Ernest Mcconnell",
 		picture: require("../img/tutors/tutor-4.png"),
 		hobby: "baking",
@@ -50,6 +53,7 @@ export const Tutors = [
 	},
 	{
 		id: 4,
+		rating: 4.1,
 		name: "Claudie Gabrielle",
 		picture: require("../img/tutors/tutor-5.png"),
 		hobby: "gardening",
@@ -61,6 +65,7 @@ export const Tutors = [
 	},
 	{
 		id: 5,
+		rating: 4.7,
 		name: "Steve Roy",
 		picture: require("../img/tutors/tutor-2.png"),
 		hobby: "gardening",
@@ -72,6 +77,7 @@ export const Tutors = [
 	},
 	{
 		id: 6,
+		rating: 4.0,
 		name: "Isabella Adelia",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "gardening",
@@ -83,6 +89,7 @@ export const Tutors = [
 	},
 	{
 		id: 7,
+		rating: 4.9,
 		name: "Abdurrahman Whelan",
 		picture: require("../img/tutors/tutor-4.png"),
 		hobby: "gardening",
@@ -94,6 +101,7 @@ export const Tutors = [
 	},
 	{
 		id: 8,
+		rating: 4.4,
 		name: "Arissa Kent",
 		picture: require("../img/tutors/tutor-5.png"),
 		hobby: "music",
@@ -105,6 +113,7 @@ export const Tutors = [
 	},
 	{
 		id: 9,
+		rating: 4.1,
 		name: "Paula Santos",
 		picture: require("../img/tutors/tutor-6.png"),
 		hobby: "music",
@@ -116,6 +125,7 @@ export const Tutors = [
 	},
 	{
 		id: 10,
+		rating: 4.6,
 		name: "Chen Yang",
 		picture: require("../img/tutors/tutor-2.png"),
 		hobby: "music",
@@ -127,6 +137,7 @@ export const Tutors = [
 	},
 	{
 		id: 11,
+		rating: 4.2,
 		name: "Zack Haworth",
 		picture: require("../img/tutors/tutor-1.png"),
 		hobby: "music",
@@ -138,6 +149,7 @@ export const Tutors = [
 	},
 	{
 		id: 12,
+		rating: 4.8,
 		name: "Emilee Tyron",
 		picture: require("../img/tutors/tutor-6.png"),
 		hobby: "yoga",
@@ -149,6 +161,7 @@ export const Tutors = [
 	},
 	{
 		id: 13,
+		rating: 4.4,
 		name: "Guo Zan",
 		picture: require("../img/tutors/tutor-2.png"),
 		hobby: "yoga",
@@ -160,6 +173,7 @@ export const Tutors = [
 	},
 	{
 		id: 14,
+		rating: 4.1,
 		name: "Mark Kylo",
 		picture: require("../img/tutors/tutor-1.png"),
 		hobby: "yoga",
@@ -171,6 +185,7 @@ export const Tutors = [
 	},
 	{
 		id: 15,
+		rating: 4.3,
 		name: "Scarlet Reese",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "yoga",
@@ -182,6 +197,7 @@ export const Tutors = [
 	},
 	{
 		id: 16,
+		rating: 4.6,
 		name: "Gandalf",
 		picture: require("../img/tutors/tutor-4.png"),
 		hobby: "yoga",
@@ -193,6 +209,7 @@ export const Tutors = [
 	},
 	{
 		id: 17,
+		rating: 3.7,
 		name: "Mariana Santos",
 		picture: require("../img/tutors/tutor-5.png"),
 		hobby: "yoga",
@@ -204,6 +221,7 @@ export const Tutors = [
 	},
 	{
 		id: 18,
+		rating: 4.5,
 		name: "Izabelle Cartwright",
 		picture: require("../img/tutors/tutor-6.png"),
 		hobby: "yoga",
@@ -215,6 +233,7 @@ export const Tutors = [
 	},
 	{
 		id: 19,
+		rating: 3.5,
 		name: "Elora Kaur",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "yoga",
@@ -226,6 +245,7 @@ export const Tutors = [
 	},
 	{
 		id: 20,
+		rating: 4.7,
 		name: "Emilee Tyron",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "gardening",
@@ -237,6 +257,7 @@ export const Tutors = [
 	},
 	{
 		id: 21,
+		rating: 4.6,
 		name: "Guo Zan",
 		picture: require("../img/tutors/tutor-2.png"),
 		hobby: "gardening",
@@ -248,6 +269,7 @@ export const Tutors = [
 	},
 	{
 		id: 22,
+		rating: 4.0,
 		name: "Mark Kylo",
 		picture: require("../img/tutors/tutor-1.png"),
 		hobby: "gardening",
@@ -259,6 +281,7 @@ export const Tutors = [
 	},
 	{
 		id: 23,
+		rating: 4.5,
 		name: "Scarlet Reese",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "gardening",
@@ -270,6 +293,7 @@ export const Tutors = [
 	},
 	{
 		id: 24,
+		rating: 4.0,
 		name: "Gandalf",
 		picture: require("../img/tutors/tutor-4.png"),
 		hobby: "gardening",
@@ -281,6 +305,7 @@ export const Tutors = [
 	},
 	{
 		id: 25,
+		rating: 3.8,
 		name: "Mariana Santos",
 		picture: require("../img/tutors/tutor-5.png"),
 		hobby: "gardening",
@@ -292,6 +317,7 @@ export const Tutors = [
 	},
 	{
 		id: 26,
+		rating: 4.7,
 		name: "Izabelle Cartwright",
 		picture: require("../img/tutors/tutor-6.png"),
 		hobby: "gardening",
@@ -303,6 +329,7 @@ export const Tutors = [
 	},
 	{
 		id: 27,
+		rating: 4.0,
 		name: "Elora Kaur",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "gardening",
@@ -314,6 +341,7 @@ export const Tutors = [
 	},
 	{
 		id: 28,
+		rating: 4.1,
 		name: "Elora Kaur",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "music",
@@ -325,6 +353,7 @@ export const Tutors = [
 	},
 	{
 		id: 29,
+		rating: 4.3,
 		name: "Emilee Tyron",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "music",
@@ -336,6 +365,7 @@ export const Tutors = [
 	},
 	{
 		id: 30,
+		rating: 3.7,
 		name: "Guo Zan",
 		picture: require("../img/tutors/tutor-2.png"),
 		hobby: "music",
@@ -347,6 +377,7 @@ export const Tutors = [
 	},
 	{
 		id: 31,
+		rating: 3.9,
 		name: "Mark Kylo",
 		picture: require("../img/tutors/tutor-1.png"),
 		hobby: "music",
@@ -358,6 +389,7 @@ export const Tutors = [
 	},
 	{
 		id: 32,
+		rating: 4.2,
 		name: "Scarlet Reese",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "music",
@@ -369,6 +401,7 @@ export const Tutors = [
 	},
 	{
 		id: 33,
+		rating: 4.4,
 		name: "Gandalf",
 		picture: require("../img/tutors/tutor-4.png"),
 		hobby: "music",
@@ -380,6 +413,7 @@ export const Tutors = [
 	},
 	{
 		id: 34,
+		rating: 3.9,
 		name: "Mariana Santos",
 		picture: require("../img/tutors/tutor-5.png"),
 		hobby: "music",
@@ -391,6 +425,7 @@ export const Tutors = [
 	},
 	{
 		id: 35,
+		rating: 3.5,
 		name: "Izabelle Cartwright",
 		picture: require("../img/tutors/tutor-6.png"),
 		hobby: "music",
@@ -402,6 +437,7 @@ export const Tutors = [
 	},
 	{
 		id: 36,
+		rating: 3.8,
 		name: "Elora Kaur",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "baking",
@@ -413,6 +449,7 @@ export const Tutors = [
 	},
 	{
 		id: 37,
+		rating: 4.7,
 		name: "Emilee Tyron",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "baking",
@@ -424,6 +461,7 @@ export const Tutors = [
 	},
 	{
 		id: 38,
+		rating: 4.6,
 		name: "Guo Zan",
 		picture: require("../img/tutors/tutor-2.png"),
 		hobby: "baking",
@@ -435,6 +473,7 @@ export const Tutors = [
 	},
 	{
 		id: 39,
+		rating: 4.6,
 		name: "Mark Kylo",
 		picture: require("../img/tutors/tutor-1.png"),
 		hobby: "baking",
@@ -446,6 +485,7 @@ export const Tutors = [
 	},
 	{
 		id: 40,
+		rating: 4.2,
 		name: "Scarlet Reese",
 		picture: require("../img/tutors/tutor-3.png"),
 		hobby: "baking",
@@ -457,6 +497,7 @@ export const Tutors = [
 	},
 	{
 		id: 41,
+		rating: 4.1,
 		name: "Gandalf",
 		picture: require("../img/tutors/tutor-4.png"),
 		hobby: "baking",
@@ -468,6 +509,7 @@ export const Tutors = [
 	},
 	{
 		id: 42,
+		rating: 4.6,
 		name: "Mariana Santos",
 		picture: require("../img/tutors/tutor-5.png"),
 		hobby: "baking",
@@ -479,6 +521,7 @@ export const Tutors = [
 	},
 	{
 		id: 43,
+		rating: 3.9,
 		name: "Izabelle Cartwright",
 		picture: require("../img/tutors/tutor-6.png"),
 		hobby: "baking",
@@ -515,3 +558,11 @@ export const Filters = [
 		],
 	},
 ];
+
+export const detailIcons = {
+	euro: require("../img/detail-icons/euro.png"),
+	location: require("../img/detail-icons/location.png"),
+	languages: require("../img/detail-icons/languages.png"),
+	hobby: require("../img/detail-icons/hobby.png"),
+	star: require("../img/detail-icons/star.png"),
+};
