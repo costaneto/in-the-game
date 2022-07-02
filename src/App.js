@@ -33,6 +33,7 @@ function App() {
 					<Route path="/search/:hobby" element={<Search />} />
 					<Route path="*" element={<Error />} />
 				</Routes>
+				<footer></footer>
 			</Router>
 		</div>
 	);
