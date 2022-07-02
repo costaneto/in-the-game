@@ -96,6 +96,7 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 								languages={popup.languages}
 								distance={popup.distance}
 							/>
+							<div className="extra-info"></div>
 						</div>
 					</div>
 					<div className="dark-background" onClick={closePopup}></div>
