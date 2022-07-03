@@ -290,7 +290,8 @@
 	display: flex;
 }
 
-.filter-item button,.tutor-action button {
+.filter-item button,
+.tutor-action button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -299,13 +300,11 @@
 	border-radius: 2rem;
 	transition: 0.3s;
 	margin-right: 1.3rem;
-}
-
-.filter-item button {
 	background-color: var(--inthegame-orange);
 }
 
-.filter-item button:hover {
+.filter-item button:hover,
+.tutor-action button:hover {
 	background-color: var(--inthegame-teal);
 }
 
@@ -485,6 +484,7 @@ input[type="radio"] {
 .popup-info .tutor {
 	width: 85%;
 	margin-top: 2.5rem;
+	font-size: 1.3em;
 }
 
 .popup-info .tutor-name {
@@ -497,14 +497,18 @@ input[type="radio"] {
 .popup-info .remaining-details {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	margin-top: 1.5rem;
 }
 
 .tutor-action {
-	margin-top: 3rem;
+	margin-top: 2.5rem;
+	display: flex;
 }
 
 .tutor-action button {
 	margin-right: 2rem;
+	color: white;
+	font-size: 0.8em;
 }
 
 .extra-info {

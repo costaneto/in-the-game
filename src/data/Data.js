@@ -560,9 +560,9 @@ export const Filters = [
 ];
 
 export const detailIcons = {
-	euro: require("../img/detail-icons/euro.png"),
-	location: require("../img/detail-icons/location.png"),
-	languages: require("../img/detail-icons/languages.png"),
-	hobby: require("../img/detail-icons/hobby.png"),
+	euro: require("../img/detail-icons/euro_blue.png"),
+	location: require("../img/detail-icons/location_blue.png"),
+	languages: require("../img/detail-icons/languages_blue.png"),
+	hobby: require("../img/detail-icons/hobby_blue.png"),
 	star: require("../img/detail-icons/star.png"),
 };
