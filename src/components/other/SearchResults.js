@@ -88,6 +88,7 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 					<div className="popup-info">
 						<div className="tutor">
 							<TutorDetails
+								isPopup={popup.showing}
 								picture={popup.picture}
 								rating={popup.rating}
 								name={popup.name}
@@ -96,7 +97,10 @@ const SearchResults = ({ keyword, tutors, filterValues }) => {
 								languages={popup.languages}
 								distance={popup.distance}
 							/>
-							<div className="extra-info"></div>
+						</div>
+						<div className="extra-info">
+							<span className="bold-span">About</span>
+							<p>{popup.about}</p>
 						</div>
 					</div>
 					<div className="dark-background" onClick={closePopup}></div>

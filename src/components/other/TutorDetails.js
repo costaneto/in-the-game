@@ -2,6 +2,7 @@ import React from "react";
 import { detailIcons } from "../../data/Data";
 
 const TutorDetails = ({
+	isPopup,
 	picture,
 	rating,
 	name,
@@ -29,7 +30,7 @@ const TutorDetails = ({
 			<div className="tutor-details">
 				<div className="name-and-rating">
 					<p className="tutor-name">
-						<span>{name}</span>
+						<span className="bold-span">{name}</span>
 						<span className="detail-span">{rating}</span>
 					</p>
 					<img className="rating-star" src={detailIcons.star} />
@@ -60,6 +61,12 @@ const TutorDetails = ({
 						</p>
 					</div>
 				</div>
+				{isPopup && (
+					<div className="tutor-action">
+						<button>Book</button>
+						<button>Message</button>
+					</div>
+				)}
 			</div>
 		</>
 	);
