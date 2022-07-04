@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { detailIcons } from "../../data/Data";
+import TutorAction from "./TutorAction";
 
 const TutorDetails = ({
 	isPopup,
@@ -63,12 +64,8 @@ const TutorDetails = ({
 				</div>
 				{isPopup && (
 					<div className="tutor-action">
-						<div>
-							<button>Book</button>
-						</div>
-						<div>
-							<button>Message</button>
-						</div>
+						<TutorAction action={1} />
+						<TutorAction action={2} />
 					</div>
 				)}
 			</div>

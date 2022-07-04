@@ -291,7 +291,7 @@
 }
 
 .filter-item button,
-.tutor-action button {
+.action-container button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -304,7 +304,7 @@
 }
 
 .filter-item button:hover,
-.tutor-action button:hover {
+.action-container button:hover {
 	background-color: var(--inthegame-teal);
 }
 
@@ -509,8 +509,11 @@ input[type="radio"] {
 	display: flex;
 }
 
-.tutor-action button {
+.action-container {
 	margin-right: 2rem;
+}
+
+.action-container button {
 	color: white;
 	font-size: 0.8em;
 }
