@@ -427,7 +427,7 @@ input[type="radio"] {
 }
 
 .tutor-name .detail-span {
-	margin-left: 0.5rem;
+	margin-left: 1rem;
 }
 
 .detail-span {
@@ -446,7 +446,7 @@ input[type="radio"] {
 }
 
 .remaining-details img {
-	margin-right: 0.5rem;
+	margin-right: 0.8rem;
 }
 
 .remaining-details:last-child {
@@ -496,8 +496,12 @@ input[type="radio"] {
 }
 .popup-info .remaining-details {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 2fr 1fr;
 	margin-top: 1.5rem;
+}
+
+.popup-info .remaining-details img {
+	width: 1.5rem;
 }
 
 .tutor-action {
@@ -529,7 +533,7 @@ input[type="radio"] {
 	width: 100%;
 	height: 100%;
 	background-color: black;
-	opacity: 60%;
+	opacity: 80%;
 }
 
 .error-container {

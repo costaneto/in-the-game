@@ -63,8 +63,12 @@ const TutorDetails = ({
 				</div>
 				{isPopup && (
 					<div className="tutor-action">
-						<button>Book</button>
-						<button>Message</button>
+						<div>
+							<button>Book</button>
+						</div>
+						<div>
+							<button>Message</button>
+						</div>
 					</div>
 				)}
 			</div>
