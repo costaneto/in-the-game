@@ -4,8 +4,6 @@ const TutorAction = ({ action }) => {
 	const [isAction, setIsAction] = useState(false);
 
 	let actionRef = useRef();
-	const popupArea = document.querySelector(".popup-container");
-	console.log(popupArea);
 
 	// Closing current tutor action
 	useEffect(() => {
@@ -17,13 +15,13 @@ const TutorAction = ({ action }) => {
 			}
 		};
 
-		popupArea.addEventListener("mousedown", handler);
-		popupArea.addEventListener("touchstart", handler);
+		document.addEventListener("mousedown", handler);
+		document.addEventListener("touchstart", handler);
 
 		// Remove the event listener
 		return () => {
-			popupArea.removeEventListener("mousedown", handler);
-			popupArea.removeEventListener("touchstart", handler);
+			document.removeEventListener("mousedown", handler);
+			document.removeEventListener("touchstart", handler);
 		};
 	}, [isAction]);
 
@@ -32,13 +30,13 @@ const TutorAction = ({ action }) => {
 			{action == 1 && (
 				<div className="action-container" ref={actionRef}>
 					<button onClick={() => setIsAction((prev) => !prev)}>Book</button>
-					{isAction && <div>Book Menu</div>}
+					{isAction && <div className="action">Book Menu</div>}
 				</div>
 			)}
 			{action == 2 && (
 				<div className="action-container" ref={actionRef}>
 					<button onClick={() => setIsAction((prev) => !prev)}>Message</button>
-					{isAction && <div>Message Menu</div>}
+					{isAction && <div className="action">Message Menu</div>}
 				</div>
 			)}
 		</>
