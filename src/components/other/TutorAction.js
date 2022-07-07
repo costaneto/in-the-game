@@ -30,13 +30,34 @@ const TutorAction = ({ action }) => {
 			{action == 1 && (
 				<div className="action-container" ref={actionRef}>
 					<button onClick={() => setIsAction((prev) => !prev)}>Book</button>
-					{isAction && <div className="action">Book Menu</div>}
+					{isAction && (
+						<div className="action">
+							<p>June 2022</p>
+							<div className="book-calendar">
+								<div className="days-of-week"></div>
+								<div className="days"></div>
+							</div>
+							<div>
+								<button>OK</button>
+							</div>
+						</div>
+					)}
 				</div>
 			)}
 			{action == 2 && (
 				<div className="action-container" ref={actionRef}>
 					<button onClick={() => setIsAction((prev) => !prev)}>Message</button>
-					{isAction && <div className="action">Message Menu</div>}
+					{isAction && (
+						<div className="action" id="action_message">
+							<form className="message-form">
+								<p>What's your name?</p>
+								<input type="text" placeholder="name" />
+								<p>Type your message</p>
+								<textarea placeholder="message" />
+								<button type="submit">Send</button>
+							</form>
+						</div>
+					)}
 				</div>
 			)}
 		</>

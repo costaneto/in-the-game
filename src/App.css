@@ -518,6 +518,26 @@ input[type="radio"] {
 	font-size: 0.8em;
 }
 
+.action {
+	width: 30rem;
+	height: 30rem;
+	background-color: white;
+	box-shadow: var(--card-hover) 0px 8px 40px 0px;
+	border-radius: 2rem;
+	position: absolute;
+	z-index: 1;
+	transform: translateY(0.5rem);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#action_message {
+	width: 25rem;
+	height: 20rem;
+}
+
 .extra-info {
 	width: 85%;
 	margin-top: 3rem;
