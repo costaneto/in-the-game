@@ -527,6 +527,14 @@ input[type="radio"] {
 	position: absolute;
 	z-index: 1;
 	transform: translateY(0.5rem);
+	display: none;
+}
+
+.action button {
+	margin: 0;
+}
+
+.action.show {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -536,6 +544,14 @@ input[type="radio"] {
 #action_message {
 	width: 25rem;
 	height: 20rem;
+}
+
+.book-calendar {
+	width: 100%;
+}
+
+.book-calendar img {
+	width: 100%;
 }
 
 .extra-info {

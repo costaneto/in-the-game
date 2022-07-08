@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
+import Book from "./Book";
+import Message from "./Message";
 
 const TutorAction = ({ action }) => {
 	const [isAction, setIsAction] = useState(false);
@@ -25,39 +27,25 @@ const TutorAction = ({ action }) => {
 		};
 	}, [isAction]);
 
+	const close_action = (e, action) => {
+		e.preventDefault();
+		if (action === "book") alert("You booked a session");
+		else if (action === "message") alert("Your message was sent");
+		setIsAction(false);
+	};
+
 	return (
 		<>
 			{action == 1 && (
 				<div className="action-container" ref={actionRef}>
 					<button onClick={() => setIsAction((prev) => !prev)}>Book</button>
-					{isAction && (
-						<div className="action">
-							<p>June 2022</p>
-							<div className="book-calendar">
-								<div className="days-of-week"></div>
-								<div className="days"></div>
-							</div>
-							<div>
-								<button>OK</button>
-							</div>
-						</div>
-					)}
+					<Book isAction={isAction} onCloseAction={close_action} />
 				</div>
 			)}
 			{action == 2 && (
 				<div className="action-container" ref={actionRef}>
 					<button onClick={() => setIsAction((prev) => !prev)}>Message</button>
-					{isAction && (
-						<div className="action" id="action_message">
-							<form className="message-form">
-								<p>What's your name?</p>
-								<input type="text" placeholder="name" />
-								<p>Type your message</p>
-								<textarea placeholder="message" />
-								<button type="submit">Send</button>
-							</form>
-						</div>
-					)}
+					<Message isAction={isAction} onCloseAction={close_action} />
 				</div>
 			)}
 		</>
