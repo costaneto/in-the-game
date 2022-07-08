@@ -467,7 +467,7 @@ input[type="radio"] {
 
 .popup-info {
 	width: 50%;
-	height: 90%;
+	height: 60%;
 	transform: translate(-50%, -50%);
 	top: 50%;
 	left: 50%;
@@ -530,6 +530,11 @@ input[type="radio"] {
 	display: none;
 }
 
+#action_message {
+	width: 25rem;
+	height: 20rem;
+}
+
 .action button {
 	margin: 0;
 }
@@ -541,17 +546,60 @@ input[type="radio"] {
 	justify-content: center;
 }
 
-#action_message {
-	width: 25rem;
-	height: 20rem;
-}
-
 .book-calendar {
 	width: 100%;
 }
 
 .book-calendar img {
 	width: 100%;
+}
+
+.message-form {
+	width: 100%;
+	height: 30rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.message-form p {
+	margin-top: 1rem;
+}
+
+.message-name,
+.message-text {
+	width: 80%;
+	height: 3rem;
+	border-radius: 2rem;
+	background-color: var(--inthegame-soft-gray);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.message-text {
+	height: 6rem;
+}
+
+.message-text textarea {
+	height: 70%;
+	resize: none;
+}
+
+.message-form input,
+.message-form textarea {
+	outline: 0;
+	border: 0;
+	width: 90%;
+	font-family: Roboto-Light;
+	font-size: 0.8em;
+	background-color: transparent;
+}
+
+.message-form input:focus,
+.message-form textarea:focus {
+	outline: 0;
+	border: 0;
 }
 
 .extra-info {
